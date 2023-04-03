@@ -1,0 +1,21 @@
+extends layout.pug
+
+block content 
+	.container 
+		h1 Edit Blog 
+
+	if error
+		p.error ###
+
+	if success 
+		p.success Blog was successfully updated!
+
+	form.form(action=`/blogs/${blog.id}/update` method='POST')
+		label(for="title") Title 
+		input.input(type="text", name='title', placeholder="Title of the blog", value= blog.title)
+
+		label(for="content") Content 
+		textarea.input(name="content", cols="30", rows="10")= blog.content
+
+
+		button.btn Submit
