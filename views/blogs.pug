@@ -1,0 +1,17 @@
+extends layout.pug
+
+block content 
+  .container 
+    h1 All Blogs 
+
+    if deleted 
+      p.success Deleted
+    
+    if blogs.length 
+      each blog in blogs 
+        .blog-wrapper
+          a.blog(href=`/blogs/${blog.id}`) #{ blog.title }
+          a.delete(href=`/blogs/${blog.id}/delete`) Delete
+          a.edit(href=`/blogs/${blog.id}/update`) Edit
+    else 
+      p.blog No blog available !

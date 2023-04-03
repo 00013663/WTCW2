@@ -1,0 +1,21 @@
+extends layout.pug
+
+block content 
+ .container 
+   h1 Add Blog 
+
+   if error  
+     p.error Some error occured! Please, check that Title/Content is not empty.
+
+   if success 
+     p.success Blog was successfully added to the database!
+
+   form.form(action="/create" method='POST')
+     label(for="title") Title 
+     input.input(type="text" name='title' value="" placeholder="Title of the blog")
+
+     label(for="content") Content 
+     textarea.input(name="content", cols="30", rows="10") 
+    
+
+     button.btn Create a blog
