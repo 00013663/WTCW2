@@ -8,3 +8,5 @@ The code contains several routes for different pages and actions. The home page 
 The blogs route renders a list of all blog posts stored in the JSON file, while the blogs/:id route renders an individual blog post based on its ID. The blogs/:id/update route renders an update form for editing existing blog posts, and when this form is submitted it updates the corresponding blog post in the JSON file. Finally, the blogs/:id/delete route deletes an individual blog post from the JSON file based on its ID. 
 
 The code also contains a function for generating unique IDs for each blog post when they are created or updated.
+
+github link - https://github.com/00013663/WTCW2
